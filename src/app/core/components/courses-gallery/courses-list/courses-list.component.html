@@ -1,2 +1,18 @@
-<p>courses-list works!</p>
-<courses-item></courses-item>
+<section class="courses-list">
+  <button class="courses-list__add-btn">
+    <fa-icon [icon]="faPlus" class="courses-list__add-icon"></fa-icon>
+    Add course
+  </button>
+  <ul class="courses-list__list">
+    <li>
+      <courses-item></courses-item>
+    </li>
+    <li>
+      <courses-item></courses-item>
+    </li>
+    <li>
+      <courses-item></courses-item>
+    </li>
+  </ul>
+  <courses-more></courses-more>
+</section>

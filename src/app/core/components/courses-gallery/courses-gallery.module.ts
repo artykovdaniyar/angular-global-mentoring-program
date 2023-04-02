@@ -5,6 +5,7 @@ import { CoursesItemComponent } from './courses-item/courses-item.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CoursesSearchComponent } from './courses-search/courses-search.component';
 import { CoursesMoreComponent } from './courses-more/courses-more.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { CoursesMoreComponent } from './courses-more/courses-more.component';
     CoursesSearchComponent,
     CoursesMoreComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FontAwesomeModule],
   exports: [
     CoursesGalleryComponent,
     CoursesItemComponent,
