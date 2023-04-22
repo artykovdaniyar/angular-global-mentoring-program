@@ -3,8 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'courses-gallery',
   templateUrl: './courses-gallery.component.html',
-  styleUrls: ['./courses-gallery.component.scss']
+  styleUrls: ['./courses-gallery.component.scss'],
 })
 export class CoursesGalleryComponent {
+  deleteCourseHandler(id: number) {
+    console.log(id);
+  }
 
+  editCourseHandler(id: number) {
+    console.log(id);
+  }
 }

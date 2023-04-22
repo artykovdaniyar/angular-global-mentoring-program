@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Course } from './../../../modals/course.modal';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {
   faClock,
   faCalendarDays,
@@ -16,4 +17,16 @@ export class CoursesItemComponent {
   faCalendarDays = faCalendarDays;
   faPen = faPen;
   faTrash = faTrash;
+  @Input() course!: Course;
+
+  @Output() onDelete = new EventEmitter<number>();
+  @Output() onEdit = new EventEmitter<number>();
+
+  deleteCourse(id: number) {
+    this.onDelete.emit(id);
+  }
+
+  editCourse(id: number) {
+    this.onEdit.emit(id);
+  }
 }
