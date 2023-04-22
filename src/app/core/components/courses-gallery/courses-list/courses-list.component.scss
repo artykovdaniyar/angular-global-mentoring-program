@@ -1,0 +1,24 @@
+.courses-list {
+  &__add-btn {
+    display: flex;
+    align-items: center;
+    margin: 16px 0 16px auto;
+    border-radius: 3px;
+    color: var(--white);
+    padding: 6px 20px;
+    white-space: nowrap;
+    background: var(--success-light-color);
+    transition: background 0.3s, transform 0.3s;
+  }
+  &__add-btn:hover {
+    transform: translateY(-2px);
+    background: var(--success-dark-color);
+  }
+  &__add-btn:active {
+    transform: translateY(1px);
+    background: var(--success-color);
+  }
+  &__add-icon {
+    margin-right: 8px;
+  }
+}
