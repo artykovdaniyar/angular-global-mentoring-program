@@ -2,6 +2,7 @@
   <div class="courses-gallery__container container">
     <courses-search (onSearch)="searchCoursesHandler($event)"></courses-search>
     <courses-list
+      [courses]="courses"
       (onDelete)="deleteCourseHandler($event)"
       (onEdit)="editCourseHandler($event)"
     ></courses-list>
