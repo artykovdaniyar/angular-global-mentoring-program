@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
@@ -12,4 +12,6 @@ export class HeaderComponent {
   faPlayCircle = faPlayCircle;
   faUser = faUser;
   faRightFromBracket = faRightFromBracket;
+
+  @Input() title!: string;
 }

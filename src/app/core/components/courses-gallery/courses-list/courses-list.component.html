@@ -4,15 +4,13 @@
     Add course
   </button>
   <ul class="courses-list__list">
-    <li>
-      <courses-item></courses-item>
-    </li>
-    <li>
-      <courses-item></courses-item>
-    </li>
-    <li>
-      <courses-item></courses-item>
+    <li *ngFor="let course of courses; trackBy: trackByFunc">
+      <courses-item
+        (onDelete)="deleteCourse($event)"
+        (onEdit)="editCourse($event)"
+        [course]="course"
+      ></courses-item>
     </li>
   </ul>
-  <courses-more></courses-more>
+  <courses-more (onSearch)="loadMoreCourses()"></courses-more>
 </section>

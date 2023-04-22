@@ -1,6 +1,11 @@
 <div class="courses-gallery">
   <div class="courses-gallery__container container">
-    <courses-search></courses-search>
-    <courses-list></courses-list>
+    <courses-search (onSearch)="searchCoursesHandler($event)"></courses-search>
+    <courses-list
+      [courses]="courses"
+      (onDelete)="deleteCourseHandler($event)"
+      (onEdit)="editCourseHandler($event)"
+      (onLoadMore)="loadMoreHandler()"
+    ></courses-list>
   </div>
 </div>
