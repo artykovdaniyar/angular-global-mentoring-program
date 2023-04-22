@@ -4,12 +4,15 @@
       <fa-icon [icon]="faMagnifyingGlass" size="sm" flip="horizontal"></fa-icon>
     </label>
     <input
+      [(ngModel)]="searchTerm"
       type="text"
       class="input"
       id="serchInput"
       name="searchWord"
       placeholder="Text to search"
     />
-    <button class="btn-submit" type="submit">Search</button>
+    <button class="btn-submit" type="button" (click)="searchCourses()">
+      Search
+    </button>
   </form>
 </div>

@@ -13,4 +13,8 @@ export class CoursesGalleryComponent {
   editCourseHandler(id: number) {
     console.log(id);
   }
+
+  searchCoursesHandler(searchTerm: string) {
+    console.log(searchTerm);
+  }
 }

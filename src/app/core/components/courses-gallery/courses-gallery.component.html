@@ -1,6 +1,6 @@
 <div class="courses-gallery">
   <div class="courses-gallery__container container">
-    <courses-search></courses-search>
+    <courses-search (onSearch)="searchCoursesHandler($event)"></courses-search>
     <courses-list
       (onDelete)="deleteCourseHandler($event)"
       (onEdit)="editCourseHandler($event)"

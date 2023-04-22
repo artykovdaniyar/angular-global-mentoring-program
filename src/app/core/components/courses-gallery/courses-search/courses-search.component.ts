@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {
   faMagnifyingGlass,
   faArrowRotateRight,
@@ -12,5 +12,11 @@ import {
 export class CoursesSearchComponent {
   faMagnifyingGlass = faMagnifyingGlass;
   faArrowRotateRight = faArrowRotateRight;
-  constructor() {}
+  searchTerm: string = '';
+
+  @Output() onSearch = new EventEmitter<string>();
+
+  searchCourses() {
+    this.onSearch.emit(this.searchTerm);
+  }
 }
