@@ -48,4 +48,8 @@ export class CoursesGalleryComponent {
   searchCoursesHandler(searchTerm: string) {
     console.log(searchTerm);
   }
+
+  loadMoreHandler() {
+    console.log('Load More!');
+  }
 }
