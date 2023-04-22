@@ -25,4 +25,7 @@ export class CoursesListComponent {
   loadMoreCourses() {
     this.onLoadMore.emit();
   }
+  trackByFunc(index: number, course: Course) {
+    return course.id;
+  }
 }
