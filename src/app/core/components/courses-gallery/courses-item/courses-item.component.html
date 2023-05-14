@@ -16,11 +16,15 @@
     <p class="description">{{ course.description }}</p>
   </div>
   <div class="course__tools col-12 col-md-3 justify-content-end">
-    <button class="btn" (click)="editCourse(course.id)">
+    <button class="btn btn-edit" (click)="editCourse(course.id)">
       <fa-icon [icon]="faPen" class="btn-icon"></fa-icon>
       Edit
     </button>
-    <button class="btn" type="button" (click)="deleteCourse(course.id)">
+    <button
+      class="btn btn-delete"
+      type="button"
+      (click)="deleteCourse(course.id)"
+    >
       <fa-icon class="btn-icon" [icon]="faTrash"></fa-icon>
       Detete
     </button>

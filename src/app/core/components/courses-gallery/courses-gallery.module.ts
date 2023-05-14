@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CoursesGalleryComponent } from './courses-gallery.component';
 import { CoursesItemComponent } from './courses-item/courses-item.component';
@@ -24,5 +24,6 @@ import { FormsModule } from '@angular/forms';
     CoursesSearchComponent,
     CoursesMoreComponent,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class CoursesGalleryModule {}
