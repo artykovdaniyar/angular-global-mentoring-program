@@ -4,7 +4,9 @@
     Add course
   </button>
   <ul class="courses-list__list">
-    <li *ngFor="let course of courses; trackBy: trackByFunc">
+    <li
+      *ngFor="let course of courses | filter : searchTerm; trackBy: trackByFunc"
+    >
       <courses-item
         (onDelete)="deleteCourse($event)"
         (onEdit)="editCourse($event)"

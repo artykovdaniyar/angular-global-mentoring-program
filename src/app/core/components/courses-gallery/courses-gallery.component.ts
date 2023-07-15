@@ -9,6 +9,7 @@ import { coursesMockData } from 'src/app/share/mocks/courses.mocks.data';
 })
 export class CoursesGalleryComponent {
   courses: Course[] = [];
+  searchTerm = '';
   ngOnInit(): void {
     this.courses = coursesMockData;
   }
@@ -22,7 +23,8 @@ export class CoursesGalleryComponent {
   }
 
   searchCoursesHandler(searchTerm: string) {
-    console.log(searchTerm);
+    this.searchTerm = searchTerm;
+    console.log(this.searchTerm);
   }
 
   loadMoreHandler() {

@@ -8,9 +8,10 @@ import { Course } from 'src/app/core/modals/course.modal';
   styleUrls: ['./courses-list.component.scss'],
 })
 export class CoursesListComponent {
-  @Input() courses!: Course[];
-
   faPlus = faPlus;
+
+  @Input() courses!: Course[];
+  @Input() searchTerm = '';
 
   @Output() onDelete = new EventEmitter<number>();
   @Output() onEdit = new EventEmitter<number>();

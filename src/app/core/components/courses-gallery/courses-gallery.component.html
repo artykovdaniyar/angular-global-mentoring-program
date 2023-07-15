@@ -3,6 +3,7 @@
     <courses-search (onSearch)="searchCoursesHandler($event)"></courses-search>
     <courses-list
       [courses]="courses"
+      [searchTerm]="searchTerm"
       (onDelete)="deleteCourseHandler($event)"
       (onEdit)="editCourseHandler($event)"
       (onLoadMore)="loadMoreHandler()"
