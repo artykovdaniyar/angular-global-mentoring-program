@@ -3,12 +3,14 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Course } from '../../../modals/course.modal';
 import { CoursesItemComponent } from './courses-item.component';
 import { coursesMockData } from 'src/app/share/mocks/courses.mocks.data';
+import { DurationPipe } from 'src/app/share/pipes/duration/duration.pipe';
 
 describe('CoursesItemComponent', () => {
   let component: CoursesItemComponent;
   let fixture: ComponentFixture<CoursesItemComponent>;
   let deleteSpy: jasmine.Spy;
   let editSpy: jasmine.Spy;
+  let durationPipe: DurationPipe;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -21,26 +23,37 @@ describe('CoursesItemComponent', () => {
     component = fixture.componentInstance;
     deleteSpy = spyOn(component.onDelete, 'emit');
     editSpy = spyOn(component.onEdit, 'emit');
+    durationPipe = new DurationPipe();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render course data', () => {
+  it('should render title in uppercase', () => {
     const course: Course = coursesMockData[0];
     component.course = course;
     fixture.detectChanges();
     const titleElement = fixture.nativeElement.querySelector('.card .title');
-    const lengthElement =
+    expect(titleElement.textContent).toContain(course.name.toUpperCase());
+  });
+
+  it('should render course data', () => {
+    const course: Course = coursesMockData[0];
+    component.course = course;
+    fixture.detectChanges();
+
+    const durationElement =
       fixture.nativeElement.querySelector('.card .visite-time');
     const dateElement = fixture.nativeElement.querySelector(
       '.card .creation-time'
     );
     const descriptionElement =
       fixture.nativeElement.querySelector('.card .description');
-    expect(titleElement.textContent).toContain(course.name);
-    expect(lengthElement.textContent).toContain(course.length);
+
+    expect(durationElement.textContent).toContain(
+      durationPipe.transform(course.duration)
+    );
     expect(dateElement.textContent).toContain(course.date);
     expect(descriptionElement.textContent).toContain(course.description);
   });

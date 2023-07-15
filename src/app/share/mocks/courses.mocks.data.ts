@@ -3,26 +3,26 @@ import { Course } from 'src/app/core/modals/course.modal';
 export const coursesMockData: Course[] = [
   {
     id: 8693,
-    name: 'Video Course 1. Name tag',
+    name: 'The Complete Angular Course: Beginner to Advanced',
     description:
-      'Learn about where you can find course description, what information they include, how they work, and details about various components of a course description Course description report information about a univesiry of college`s classes. They`re published both in course catalogs that outline degree requerement and in course schedules that contain desciptions for all courses offered during',
+      'Develop modern, complex, responsive and scalable web applications with Angular 14. Fully understand the architecture behind an Angular application and how to use it. Use the gained, deep understanding of the Angular fundamentals to quickly establish yourself as a frontend developer. Create single-page applications with one of the most modern JavaScript frameworks out there',
     date: '9 Nav, 2018',
-    length: '1h 28min',
+    duration: 96,
   },
   {
     id: 4980,
-    name: 'Video Course 2. Name tag',
+    name: 'Angular - The Complete Guide',
     description:
-      'Learn about where you can find course description, what information they include, how they work, and details about various components of a course description Course description report information about a univesiry of college`s classes. They`re published both in course catalogs that outline degree requerement and in course schedules that contain desciptions for all courses offered during',
+      'Develop modern, complex, responsive and scalable web applications with Angular 14. Fully understand the architecture behind an Angular application and how to use it. Use the gained, deep understanding of the Angular fundamentals to quickly establish yourself as a frontend developer. Create single-page applications with one of the most modern JavaScript frameworks out there',
     date: '9 Nav, 2018',
-    length: '1h 28min',
+    duration: 80,
   },
   {
     id: 8693,
-    name: 'Video Course 3. Name tag',
+    name: '100 Angular Challenge',
     description:
-      'Learn about where you can find course description, what information they include, how they work, and details about various components of a course description Course description report information about a univesiry of college`s classes. They`re published both in course catalogs that outline degree requerement and in course schedules that contain desciptions for all courses offered during',
+      'We will master all Angular has to offer by building 100 re-usable and practical Components, Directives, Services, Pipes and much more to be used in your personal or professional projects. Not only will we build 100 items, but we will also go over Jasmine and Unit Testing so we can write the most solid code possible and certify it does what it is supposed to.',
     date: '9 Nav, 2018',
-    length: '1h 28min',
+    duration: 40,
   },
 ];

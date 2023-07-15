@@ -7,6 +7,7 @@ import { CoursesSearchComponent } from './courses-search/courses-search.componen
 import { CoursesMoreComponent } from './courses-more/courses-more.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
+import { PipesModule } from 'src/app/share/pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     CoursesSearchComponent,
     CoursesMoreComponent,
   ],
-  imports: [CommonModule, FontAwesomeModule, FormsModule],
+  imports: [CommonModule, FontAwesomeModule, FormsModule, PipesModule],
   exports: [
     CoursesGalleryComponent,
     CoursesItemComponent,

@@ -1,16 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { Course } from 'src/app/core/modals/course.modal';
-import { CoursesItemComponent } from '../courses-item/courses-item.component';
-import { CoursesMoreComponent } from '../courses-more/courses-more.component';
-
 import { CoursesListComponent } from './courses-list.component';
 import { coursesMockData } from 'src/app/share/mocks/courses.mocks.data';
 import { CoursesGalleryModule } from '../courses-gallery.module';
+import { DurationPipe } from 'src/app/share/pipes/duration/duration.pipe';
 
 describe('CoursesListComponent', () => {
   let component: CoursesListComponent;
   let fixture: ComponentFixture<CoursesListComponent>;
+  let durationPipe: DurationPipe;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -22,6 +19,7 @@ describe('CoursesListComponent', () => {
     fixture = TestBed.createComponent(CoursesListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    durationPipe = new DurationPipe();
   });
 
   it('should create', () => {
@@ -37,7 +35,11 @@ describe('CoursesListComponent', () => {
   });
 
   it('should display list of courses', () => {
-    component.courses = coursesMockData;
+    const modifiedCourses = coursesMockData.map((course) => ({
+      ...course,
+      name: course.name.toUpperCase(),
+    }));
+    component.courses = modifiedCourses;
     fixture.detectChanges();
 
     const coursesList = fixture.nativeElement.querySelector(
@@ -47,9 +49,9 @@ describe('CoursesListComponent', () => {
     expect(coursesList.children.length).toBe(3);
 
     const coursesItems = coursesList.querySelectorAll('courses-item .title');
-    expect(coursesItems[0].textContent).toContain(coursesMockData[0].name);
-    expect(coursesItems[1].textContent).toContain(coursesMockData[1].name);
-    expect(coursesItems[2].textContent).toContain(coursesMockData[2].name);
+    expect(coursesItems[0].textContent).toContain(modifiedCourses[0].name);
+    expect(coursesItems[1].textContent).toContain(modifiedCourses[1].name);
+    expect(coursesItems[2].textContent).toContain(modifiedCourses[2].name);
   });
 
   it('should emit onDelete event when deleteCourse is called', () => {
