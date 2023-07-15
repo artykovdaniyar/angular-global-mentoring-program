@@ -4,6 +4,7 @@ import { Course } from '../../../modals/course.modal';
 import { CoursesItemComponent } from './courses-item.component';
 import { coursesMockData } from 'src/app/share/mocks/courses.mocks.data';
 import { DurationPipe } from 'src/app/share/pipes/duration/duration.pipe';
+import { DatePipe } from '@angular/common';
 
 describe('CoursesItemComponent', () => {
   let component: CoursesItemComponent;
@@ -11,6 +12,7 @@ describe('CoursesItemComponent', () => {
   let deleteSpy: jasmine.Spy;
   let editSpy: jasmine.Spy;
   let durationPipe: DurationPipe;
+  let datePipe: DatePipe;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -24,6 +26,7 @@ describe('CoursesItemComponent', () => {
     deleteSpy = spyOn(component.onDelete, 'emit');
     editSpy = spyOn(component.onEdit, 'emit');
     durationPipe = new DurationPipe();
+    datePipe = new DatePipe('en-US');
   });
 
   it('should create', () => {
@@ -54,7 +57,9 @@ describe('CoursesItemComponent', () => {
     expect(durationElement.textContent).toContain(
       durationPipe.transform(course.duration)
     );
-    expect(dateElement.textContent).toContain(course.date);
+    expect(dateElement.textContent).toContain(
+      datePipe.transform(course.date, 'dd MMM yyyy')
+    );
     expect(descriptionElement.textContent).toContain(course.description);
   });
 
