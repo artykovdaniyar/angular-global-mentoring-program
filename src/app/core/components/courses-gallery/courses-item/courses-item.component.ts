@@ -5,6 +5,7 @@ import {
   faCalendarDays,
   faPen,
   faTrash,
+  faStar,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -17,6 +18,7 @@ export class CoursesItemComponent {
   faCalendarDays = faCalendarDays;
   faPen = faPen;
   faTrash = faTrash;
+  faStar = faStar;
   @Input() course!: Course;
 
   @Output() onDelete = new EventEmitter<number>();
