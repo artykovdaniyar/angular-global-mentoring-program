@@ -5,7 +5,10 @@
   </button>
   <ul class="courses-list__list">
     <li
-      *ngFor="let course of courses | filter : searchTerm; trackBy: trackByFunc"
+      *ngFor="
+        let course of courses | filter : searchTerm | orderBy;
+        trackBy: trackByFunc
+      "
     >
       <courses-item
         (onDelete)="deleteCourse($event)"
