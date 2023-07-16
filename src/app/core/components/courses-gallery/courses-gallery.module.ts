@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { PipesModule } from 'src/app/share/pipes/pipes.module';
 import { DirectivesModule } from 'src/app/share/directives/directives.module';
+import { CoursesInfoCardComponent } from './courses-info-card/courses-info-card.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DirectivesModule } from 'src/app/share/directives/directives.module';
     CoursesListComponent,
     CoursesSearchComponent,
     CoursesMoreComponent,
+    CoursesInfoCardComponent,
   ],
   imports: [
     CommonModule,

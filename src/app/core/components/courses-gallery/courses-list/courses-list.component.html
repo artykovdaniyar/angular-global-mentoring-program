@@ -17,5 +17,18 @@
       ></courses-item>
     </li>
   </ul>
-  <courses-more (onSearch)="loadMoreCourses()"></courses-more>
+
+  <courses-info-card *ngIf="courses.length === 0"
+    >No data, feel free to add new course
+  </courses-info-card>
+
+  <courses-info-card
+    *ngIf="(courses | filter : searchTerm).length <= 0 && courses.length > 0"
+    >No found any courses by request
+  </courses-info-card>
+
+  <courses-more
+    *ngIf="(courses | filter : searchTerm).length > 0 && courses.length > 0"
+    (onSearch)="loadMoreCourses()"
+  ></courses-more>
 </section>
