@@ -14,14 +14,13 @@
   transform: translateY(-2px);
   box-shadow: hsla(0, 0%, 0%, 0.45) 0px 15px 20px -20px;
 }
-.card--top-rated {
-  background: rgb(237, 255, 0);
-  background: linear-gradient(
-    0deg,
-    rgba(237, 255, 0, 0.9884259259259259) 0%,
-    rgba(255, 255, 255, 1) 83%
-  );
+.card--new {
+  border: 3px solid var(--success-color);
 }
+.card--in-development {
+  border: 3px solid var(--primary-color);
+}
+
 .info-header {
   display: flex;
   align-items: center;
@@ -76,7 +75,7 @@
 
 .top-rated {
   font-size: 14px;
-  color: rgb(255, 255, 27);
+  color: var(--golden-color);
 }
 
 @media screen and (max-width: 992px) {

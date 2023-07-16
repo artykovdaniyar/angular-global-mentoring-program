@@ -8,6 +8,7 @@ import { CoursesMoreComponent } from './courses-more/courses-more.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { PipesModule } from 'src/app/share/pipes/pipes.module';
+import { DirectivesModule } from 'src/app/share/directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,13 @@ import { PipesModule } from 'src/app/share/pipes/pipes.module';
     CoursesSearchComponent,
     CoursesMoreComponent,
   ],
-  imports: [CommonModule, FontAwesomeModule, FormsModule, PipesModule],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    FormsModule,
+    PipesModule,
+    DirectivesModule,
+  ],
   exports: [
     CoursesGalleryComponent,
     CoursesItemComponent,
