@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Course } from '../../modals/course.modal';
-import { coursesMockData } from 'src/app/share/mocks/courses.mocks.data';
+import { coursesMockData } from 'src/app/shared/mocks/courses.mocks.data';
 
 @Component({
   selector: 'courses-gallery',

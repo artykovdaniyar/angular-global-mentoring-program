@@ -11,7 +11,7 @@ import { By } from '@angular/platform-browser';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CoursesGalleryModule } from './courses-gallery.module';
 import { DebugElement } from '@angular/core';
-import { coursesMockData } from 'src/app/share/mocks/courses.mocks.data';
+import { coursesMockData } from 'src/app/shared/mocks/courses.mocks.data';
 
 export const ButtonClickEvents = {
   left: { button: 0 },

@@ -7,8 +7,8 @@ import { CoursesSearchComponent } from './courses-search/courses-search.componen
 import { CoursesMoreComponent } from './courses-more/courses-more.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
-import { PipesModule } from 'src/app/share/pipes/pipes.module';
-import { DirectivesModule } from 'src/app/share/directives/directives.module';
+import { PipesModule } from 'src/app/shared/pipes/pipes.module';
+import { DirectivesModule } from 'src/app/shared/directives/directives.module';
 import { CoursesInfoCardComponent } from './courses-info-card/courses-info-card.component';
 
 @NgModule({

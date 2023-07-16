@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CoursesListComponent } from './courses-list.component';
-import { coursesMockData } from 'src/app/share/mocks/courses.mocks.data';
+import { coursesMockData } from 'src/app/shared/mocks/courses.mocks.data';
 import { CoursesGalleryModule } from '../courses-gallery.module';
-import { DurationPipe } from 'src/app/share/pipes/duration/duration.pipe';
+import { DurationPipe } from 'src/app/shared/pipes/duration/duration.pipe';
 
 describe('CoursesListComponent', () => {
   let component: CoursesListComponent;

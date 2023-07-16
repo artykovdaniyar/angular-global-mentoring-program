@@ -2,8 +2,8 @@ import { CoursesGalleryModule } from './../courses-gallery.module';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Course } from '../../../modals/course.modal';
 import { CoursesItemComponent } from './courses-item.component';
-import { coursesMockData } from 'src/app/share/mocks/courses.mocks.data';
-import { DurationPipe } from 'src/app/share/pipes/duration/duration.pipe';
+import { coursesMockData } from 'src/app/shared/mocks/courses.mocks.data';
+import { DurationPipe } from 'src/app/shared/pipes/duration/duration.pipe';
 import { DatePipe } from '@angular/common';
 
 describe('CoursesItemComponent', () => {
