@@ -1,10 +1,12 @@
+@import "../../../styles/base/variables";
+
 :host {
   margin-top: auto;
 }
 .footer {
   height: 70px;
-  color: var(--gray-500);
-  background: var(--gray-700);
+  color: $gray-500;
+  background: $gray-700;
   font-size: 12px;
 }
 .container {

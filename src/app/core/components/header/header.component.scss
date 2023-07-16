@@ -1,6 +1,8 @@
+@import "../../../styles/base/variables";
+
 .header {
-  color: var(--white-100);
-  background: var(--gray-700);
+  color: $white-100;
+  background: $gray-700;
   height: 70px;
   &__container {
     display: flex;
@@ -27,11 +29,11 @@ a {
   transition: color 0.2s;
 }
 a:hover {
-  color: var(--primary-color);
+  color: $primary-color;
 }
 a:focus,
 a:active {
-  color: var(--primary-dark-color);
+  color: $primary-dark-color;
 }
 @media screen and (max-width: 767px) {
   .registration {
@@ -44,7 +46,7 @@ a:active {
       height: 30px;
       border-radius: 50%;
       font-size: 0;
-      border: 1px solid var(--white);
+      border: 1px solid $white;
     }
     &__icon {
       font-size: 16px;
